@@ -3,8 +3,7 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/javascript/game.js"></script>
+        
         <title>Texas Hangman</title>
     </head>
 
@@ -25,8 +24,8 @@
             </div>
 
             <div class="row">
-                <div class="col" id="hiddenWord">
-
+                <div class="col">
+                    <p>Word to guess: <span id="hiddenWord"></span></p>
                 </div>
             </div>
                 
@@ -40,5 +39,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/javascript/game.js"></script>
     </body>
 </html>
