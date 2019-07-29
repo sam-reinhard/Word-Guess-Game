@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/javascript/game.js"></script>
+        <title>Texas Hangman</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>Texas Hangman</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Wins: <span id="wins">0</span></p>
+                </div>
+
+                <div class="col">
+                    <p>Losses: <span id="losses">0</span></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col" id="hiddenWord">
+
+                </div>
+            </div>
+                
+            <div class="row">
+                <div class="col">
+                    <p>Guesses Left: <span id="guessesLeft"></span></p>
+                </div>
+
+                <div class="col">
+                    <p>Letters Guessed: <span id="guessed"></span></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
