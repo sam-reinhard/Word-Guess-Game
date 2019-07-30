@@ -24,3 +24,8 @@ var lettersLeft = selected.length;
 //     var currentWord = document.getElementById("currentWord");
 //     currentWord.data = answers;
 // }
+
+document.onkeyup = function(event){
+    var userGuess = event.key;
+    console.log(userGuess);
+};
