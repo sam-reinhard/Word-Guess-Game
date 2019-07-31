@@ -4,28 +4,35 @@ var words = ["austin", "houston", "dallas", "amarillo",
                 "laredo", "terlingua", "odessa", "tyler", 
                 "athens", "abilene", "nacogdoches", "texarkana"];
 
+var guesses = [];
+var computerWord = "";
+
 // Computer chooses a word from the array at random
-var selected = words[Math.floor(Math.random() * words.length)];
-console.log(selected); // what did the computer pick
+function pickSomething(){
+    var selected = words[Math.floor(Math.random() * words.length)];
+    console.log(selected); // what did the computer pick  
 
-// Replace the letters of the word with "_" and display the result
-var answers = [];
-for (var i = 0; i < selected.length; i++) {
-    answers[i] = "_";
+    // Replace the letters of the word with "_" and display the result
+    var answers = [];
+    for (var i = 0; i < selected.length; i++) {
+        answers[i] = "_";
+    }
+    console.log(answers); //did it make an array with _ for each letter?
+    $("#hiddenWord").text(answers.join(" "));
 }
-console.log(answers); //did it make an array with _ for each letter?
-$("#hiddenWord").text(answers.join(" "));
+
+pickSomething();
 
 
-var lettersLeft = selected.length;
+// var lettersLeft = selected.length;
 
-// while (lettersLeft > 0) {
-
-//     var currentWord = document.getElementById("currentWord");
-//     currentWord.data = answers;
-// }
 
 document.onkeyup = function(event){
     var userGuess = event.key;
     console.log(userGuess);
+    guesses.push(userGuess);
+    console.log(guesses);
+    $("#guessed").empty();
+    $("#guessed").append(guesses);
 };
+
