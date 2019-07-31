@@ -5,6 +5,9 @@ var words = ["austin", "houston", "dallas", "amarillo",
                 "athens", "abilene", "nacogdoches", "texarkana"];
 
 var guesses = [];
+var guessesLeft = 6;
+var wins = 0;
+var losses = 0;
 var computerWord = "";
 
 // Computer chooses a word from the array at random
@@ -21,18 +24,31 @@ function pickSomething(){
     $("#hiddenWord").text(answers.join(" "));
 }
 
+// function updateScoreboard(){
+//     $("#guessesLeft").empty();
+//     $("#guessesLeft").append(guessesLeft);
+//     console.log("scoreboard updated");
+// }
+
 pickSomething();
-
-
-// var lettersLeft = selected.length;
-
 
 document.onkeyup = function(event){
     var userGuess = event.key;
     console.log(userGuess);
-    guesses.push(userGuess);
-    console.log(guesses);
-    $("#guessed").empty();
-    $("#guessed").append(guesses);
+
+    // check to see if the user has already guessed the letter
+    if (guesses.includes(userGuess) == false){
+        console.log("you haven't guessed that before");
+        guesses.push(userGuess);
+        console.log(guesses);
+        $("#guessed").empty();
+        $("#guessed").append(guesses);
+    }
+        // if not, check to see if the guess is correct
+
+            // if so, replace the corresponding _ with the letter, add it to guesses array
+
+            // if not, add it to guesses array and -1 from guesses left
+    
 };
 
