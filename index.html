@@ -15,11 +15,11 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p>Wins: <span id="wins"></span></p>
+                    <p>Wins: <span id="wins">0</span></p>
                 </div>
 
                 <div class="col">
-                    <p>Losses: <span id="losses"></span></p>
+                    <p>Losses: <span id="losses">0</span></p>
                 </div>
             </div>
 
@@ -35,11 +35,18 @@
                 
             <div class="row">
                 <div class="col">
-                    <p>Guesses Left: <span id="guessesLeft"></span></p>
+                    <p>Guesses Left: <span id="guessesLeft">6</span></p>
                 </div>
 
                 <div class="col">
                     <p>Letters Guessed: <span id="guessed"></span></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" id="gameOverSection">
+                    <span id="endGameMessage"></span>
+                    <button type="button" class="btn btn-dark" id="playAgain">Dark</button>
                 </div>
             </div>
         </div>
